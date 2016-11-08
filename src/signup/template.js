@@ -1,12 +1,7 @@
 var yo = require('yo-yo');
-module.exports = yo`<div class="container">
-  <div class="row">
-    <div class="col s10 push-s1">
-      <div class="row">
-        <div class="col m5 hide-on-small-only">
-          <img class="iphone" src="iphone.png" />
-        </div>
-        <div class="col s12 m7">
+var landing = require('../landing');
+
+var signupForm = yo`<div class="col s12 m7">
           <div class="row">
             <div class="signup-box">
               <h1 class="platzigram">Platzigram</h1>
@@ -29,11 +24,9 @@ module.exports = yo`<div class="container">
         </div>
         <div class="row">
           <div class="login-box">
-            ¿Tienes una cuenta? <a href="#">entrar</a>
+            ¿Tienes una cuenta? <a href="/signin">entrar</a>
           </div>
         </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>`;
+      </div>`;
+
+module.exports = landing(signupForm);
