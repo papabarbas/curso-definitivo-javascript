@@ -70,7 +70,7 @@ $avatar-size: 48px;
 
 .avatar {
   width: $avatar-size;
-  height: &avatar-size;
+  height: $avatar-size;
   border-radius: 30px;
   float: left;
   margin-right: 12px;
