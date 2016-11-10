@@ -1,5 +1,6 @@
 var yo = require('yo-yo');
 var landing = require('../landing');
+var translate = require('../translate');
 
 var signinForm = yo`
 <div class="col s12 m7">
@@ -8,20 +9,20 @@ var signinForm = yo`
       <h1 class="platzigram">Platzigram</h1>
       <form class="signup-form">
         <div class="section">
-          <a class="btn btn-fb hide-on-small-only"href="#">Iniciar sesión con Facebook</a>
-          <a class="btn btn-fb hide-on-med-and-up"href="#">Iniciar sesión</a>
+          <a class="btn btn-fb hide-on-small-only"href="#">${translate.message('signup.facebook')}</a>
+          <a class="btn btn-fb hide-on-med-and-up"href="#">${translate.message('signup.text')}</a>
         </div>
         <div class="divider"></div>
         <div class="section">
-          <input type="text" name="username" placeholder="Nombre de usuario" />
-          <input type="password" name="password" placeholder="Contraseña" />
-          <button class="btn waves-effect waves-light btn-sign-up" type="submit">Inicia sesión</button>
+          <input type="text" name="username" placeholder="${translate.message('username')}" />
+          <input type="password" name="password" placeholder="${translate.message('password')}" />
+          <button class="btn waves-effect waves-light btn-sign-up" type="submit">${translate.message('signup.call-to-action')}</button>
         </div>
       </form>
   </div>
   <div class="row">
     <div class="login-box">
-      ¿No Tienes una cuenta? <a href="/signup">Regístrate</a>
+    ${translate.message('signin.not-have-account')} <a href="/signup">${translate.message('signup.call-to-action')}</a>
     </div>
   </div>
 </div>`;
